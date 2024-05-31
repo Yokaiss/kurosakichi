@@ -1,0 +1,1384 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Ubuu</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #container {
+            position: relative;
+        }
+
+        #overlay {
+            width: 670px;
+            height: 484px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -18rem 0rem 0rem -54rem;
+            background-color: transparent;
+            background-image: url('https://static.tumblr.com/56a2d014e3ec918d0a5ab210a18367f3/3przrzw/o61pm02ku/tumblr_static_5no77aw2bpgk8ckk8sc4skkko.png');
+            background-repeat: no-repeat;
+            z-index: 900;
+            cursor: pointer;
+        }
+
+        #playButton {
+            position: absolute;
+            bottom: -286px; /* Ajustado hacia abajo */
+            left: 600px; /* Ajustado hacia la izquierda */
+            background-color: #EEEEEE;
+            color: #---;
+            border: 1px solid #000; /* Borde fino negro */
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            animation: floatUpDown 2s infinite ease-in-out;
+            z-index: 1001;
+        }
+
+        @keyframes floatUpDown {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="overlay"></div>
+        <button id="playButton" onclick="playSound()">▶</button>
+    </div>
+
+    <script>
+        var audio = new Audio('https://cdn.discordapp.com/attachments/856992786091081788/1246166135033036933/ichigovoice_1.mp3?ex=665b6627&is=665a14a7&hm=b9c1b04d89ab6a998474226dd6e17de431d2a59e191403d48a20c801d06c3d54&');
+
+        function playSound() {
+            // Ajusta el volumen (rango: 0.0 a 1.0)
+            audio.volume = 1.0; // Puedes ajustar este valor según tus preferencias
+
+            // Reproduce el sonido
+            audio.play();
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Código de Yoko</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      position: relative; /* Asegurar que el posicionamiento absoluto se refiera al cuerpo */
+    }
+
+    .creditos {
+      position: absolute;
+      bottom: 10px; /* Distancia desde la parte inferior */
+      right: 10px; /* Distancia desde la parte derecha */
+      font-size: 12px;
+      color: #888; /* Color del texto por defecto */
+      transition: color 0.3s; /* Agregar una transición para suavizar el cambio de color */
+      z-index: 1001; /* Asegurar que el texto esté por encima de otros elementos (ajusta según sea necesario) */
+    }
+
+    .creditos:hover {
+      color: #fff; /* Cambiar el color a blanco en el hover */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tu contenido existente -->
+
+  <a href="https://xat.me/Zwei" class="creditos" target="_blank">Coded by Zwei</a>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra Superior</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .barra-superior {
+      background-color: #333; /* Color de la barra (negro tirando a gris) */
+      height: 40px; /* Altura de la barra */
+      position: fixed; /* Fijar la barra en la parte superior de la página */
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para un aspecto más elegante */
+      z-index: 1000; /* Asegurar que la barra esté sobre otros elementos */
+    }
+
+    /* Agrega algún espacio al cuerpo para que el contenido no esté detrás de la barra */
+    body {
+      padding-top: 50px; /* Ajusta según el tamaño de la barra */
+    }
+
+    /* Estilo adicional para el contenido de ejemplo */
+    .contenido {
+      padding: 20px;
+      margin: 50px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="barra-superior"></div>
+
+  <div class="contenido">
+    <!-- Agrega más contenido según sea necesario -->
+  </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Página</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* Ajuste para hacer que flexbox funcione correctamente */
+        }
+
+        .contenedor {
+            display: flex;
+            flex-grow: 1; /* Ajuste para ocupar todo el espacio disponible en la dirección principal (vertical) */
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .imagen-relieve {
+            position: absolute;
+            bottom: -80px;
+            left: -70px;
+            opacity: 0.1;
+        }
+
+        .circular-images {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 310px;
+            flex-grow: 1; /* Ajuste para ocupar todo el espacio disponible en la dirección principal (vertical) */
+            justify-content: center; /* Centrar verticalmente */
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .circular-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 70px;
+            opacity: 0.8;
+        }
+
+        .additional-images {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 20px; /* Ajusta el margen izquierdo según tu preferencia */
+        }   
+           
+        .additional-circular-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 65px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Contenido de tu página aquí -->
+
+        <!-- Imagen con opacidad en la esquina inferior izquierda -->
+        <img src="https://xatimg.com/image/0hxgwHVCd3rs.png" alt="Imagen Relieve" class="imagen-relieve">
+
+        <!-- Imágenes circulares -->
+        <div class="circular-images">
+            <div class="image-container">
+                <img class="circular-image" src="https://xatimg.com/image/22VR18xQNYGY.png" alt="Imagen 1">
+                <img class="circular-image" src="https://xatimg.com/image/ZPVXG9xN5fjm.png" alt="Imagen 2">
+                <img class="circular-image" src="https://xatimg.com/image/wCfiuO64Q5Go.png" alt="Imagen 3">
+                <img class="circular-image" src="https://xatimg.com/image/967RZA8KvTkb.png" alt="Imagen 4">
+            </div>
+
+            <!-- Contenedor adicional para las nuevas imágenes -->
+            <div class="additional-images">
+             
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      pointer-events: none; /* Permite que el clic pase a través del canvas */
+    }
+  </style>
+  <title>Partículas</title>
+</head>
+<body>
+  <canvas id="particlesCanvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById('particlesCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = Math.random() * 2 - 1;
+        this.speedY = Math.random() * 2 - 1;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.size > 0.2) this.size -= 0.1;
+
+        // Verifica si la partícula está fuera de la pantalla y la reposiciona
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+        }
+      }
+
+      draw() {
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.lineWidth = 2;
+
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      }
+    }
+
+    function createParticles() {
+      for (let i = 0; i < 50; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+      }
+
+      requestAnimationFrame(animateParticles);
+    }
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      createParticles();
+    });
+
+    createParticles();
+    animateParticles();
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//fonts.googleapis.com/css?family=Vollkorn|Poppins:500" rel="stylesheet">
+  <link href="//glen-players.gitlab.io/08/setup.css" rel="stylesheet">
+  <style>
+    [glenplayer08] {
+      /* Copia y pega el bloque de estilos personalizados aquí */
+      --MusicPlayer-Position: "bottom left";
+      --MusicPlayer-Corner-Offset: 20px;
+      --MusicPlayer-Album-Image-Size: 54px;
+      --MusicPlayer-Album-Image-Corner-Roundness: 3px;
+      --MusicPlayer-Buttons-Size: 12px;
+      --MusicPlayer-Buttons-Color: #ddd;
+      --MusicPlayer-Buttons-Padding: 8px;
+      --MusicPlayer-Buttons-Border-Size: 1px;
+      --MusicPlayer-Buttons-Border-Color: #bbb;
+      --MusicPlayer-Buttons-Background: #000000;
+      --MusicPlayer-Buttons-Background-Transparency: 45%;
+      --MusicPlayer-Buttons-Background-Blur: 3px;
+      --MusicPlayer-Song-Name-Size: 12px;
+      --MusicPlayer-Song-Name-Color: #222;
+      --MusicPlayer-Artist-Name-Size: 12px;
+      --MusicPlayer-Artist-Name-Color: #777;
+      --MusicPlayer-Center-Gap: 14px;
+      --MusicPlayer-Text-Line-Spacing: 4px;
+      --MusicPlayer-Autoplay: "no";
+      --MusicPlayer-Replay: "no";
+    }
+  </style>
+  <title>Tu Página con Reproductor de Música</title>
+</head>
+<body>
+  <!-- ... Otro contenido de tu página ... -->
+
+  <div glenplayer08>
+    <img album-image src="https://xatimg.com/image/o9BK1hy0Oeu5.png">
+    <div music-info>
+      <div song-name>ENDROLL</div>
+      <div artist-name>Yoh Kamiyama</div>
+    </div>
+    <audio src="https://cdn.discordapp.com/attachments/856992786091081788/1246166134659612744/endrollv1.mp3?ex=665b6627&is=665a14a7&hm=ba648a34d0c1d49b439b3c3b7d43f3db25e81ec3e8cbe7e7540bce2b0cca47a9&" volume="85%"></audio>
+  </div>
+
+  <script src="//glen-players.gitlab.io/08/init.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      cursor: url('https://i.imgur.com/ZOrzC.png'), auto !important;
+    }
+
+    a {
+      cursor: inherit;
+    }
+  </style>
+  <title>Página con Cursor Constante</title>
+</head>
+<body>
+</body>
+</html>
+
+
+
+<!DOCTYPE html><script>var __pbpa = true;</script><script>var translated_warning_string = 'Aviso: Nunca introduzcas tu contrase\u00f1a de Tumblr a menos que la direcci\u00f3n \u201chttps://www.tumblr.com/login\u201d\x0aaparezca en la barra del navegador.\x0a\x0aTambi\u00e9n deber\u00edas ver el emblema verde de \u201cTumblr, Inc.\u201d en la barra de direcciones.\x0a\x0aLos spammers y otras personas malintencionadas utilizan formularios falsos para obtener contrase\u00f1as de forma il\u00edcita.\x0a\x0aTumblr jam\u00e1s te pedir\u00e1 que inicies sesi\u00f3n desde el blog de un usuario.\x0a\x0a\u00bfSeguro que quieres continuar?';</script><script type="text/javascript" language="javascript" src="https://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=b9f848c06fcba7eaf305d4a7cb7a1b98"></script><!DOCTYPE html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+
+ 
+<!--
+ 
+    theme seven: sour diesel  by  pirateskinned
+   
+    please don't:  edit & repost / claim as your own
+    please don't:  delete or move the credit
+    please don't:  steal bits of coding
+   
+    if you need any help, feel free to
+    message me at pirateskinned.tumblr.com
+   
+    ------
+   
+    image wrapping inspired by iniziare.tumblr.com
+    tumblr controls styling by odeysseus.tumblr.com
+    icon font by suiomi.com/font
+ 
+-->
+ 
+<title>❝ SOULAR ECLIPSE!</title>
+ 
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}.tmblr-iframe--amp-cta-button{visibility:hidden;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:100}.tmblr-iframe--amp-cta-button.tmblr-iframe--loaded{visibility:visible;animation:iframe-app-cta-transition .2s ease-out}</style><link rel="stylesheet" media="screen" href="https://assets.tumblr.com/client/prod/standalone/blog-network-npf/index.build.css?_v=f085dde138e244526309d4673db67b4c"><link rel="shortcut icon" href="https://i.imgur.com/dZ67svG.png">
+<link rel="alternate" type="application/rss+xml" href="https://saviorem-blog.tumblr.com/rss">
+
+ 
+<!-- meta tags -->
+ 
+<meta name="image:background" content=""/>
+<meta name="image:sidebar" content=""/>
+ 
+<meta name="color:background" content="#ffffff"/>
+<meta name="image:overlay" content=""/>
+<meta name="color:container" content="#f6f6f6"/>
+<meta name="color:posts" content="#ffffff"/>
+<meta name="color:border" content="#eeeeee"/>
+<meta name="color:text" content="#1d1d1d"/>
+<meta name="color:link" content="#dcd3d0"/>
+<meta name="color:bold" content="#1d1d1d"/>
+<meta name="color:italics" content="#dcd3d0"/>
+<meta name="color:accent one" content="#536549"/>
+<meta name="color:accent two" content="#738965"/>
+<meta name="color:accent three" content="#a15548"/>
+ 
+<meta name="if:background pattern" content="0"/>
+<meta name="if:image wrap" content="1"/>
+ 
+<meta name="text:big title" content="big title" />
+<meta name="text:small title" content="small title" />
+ 
+<meta name="text:link 1 url" content="/" />
+<meta name="text:link 1 title" content="home" />
+<meta name="text:link 2 url" content="/ask" />
+<meta name="text:link 2 title" content="message" />
+<meta name="text:link 3 url" content="/rules" />
+<meta name="text:link 3 title" content="rules" />
+<meta name="text:link 4 url" content="/about" />
+<meta name="text:link 4 title" content="about" />
+<meta name="text:link 5 url" content="/navi" />
+<meta name="text:link 5 title" content="navi" />
+<meta name="text:link 6 url" content="/" />
+<meta name="text:link 6 title" content="wip" />
+ 
+<!-- scripts -->
+ 
+<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<!-- fonts -->
+ 
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+ 
+<!-- icon font -- http://suiomi.com/font -->
+ 
+<link href="https://dl.dropbox.com/s/50g6fbds3rh4m0j/saturnicons.css" rel="stylesheet">
+ 
+<!-- tooltips -->
+ 
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+ 
+<script>
+    (function($){
+        $(document).ready(function(){
+            $("a[title]").style_my_tooltips({
+                tip_follows_cursor:true,
+                tip_delay_time:30,
+                tip_fade_speed:300,
+                attribute:"title"
+            });
+        });
+    })(jQuery);
+</script>
+ 
+<!-- photosets -->
+ 
+<script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
+ 
+<script>
+    $(document).ready(function(){
+       $('.photo-slideshow').pxuPhotoset({
+           lightbox: true,
+           rounded: false,
+           gutter: '1px',
+           borderRadius: '0px',
+           photoset: '.photo-slideshow',
+           photoWrap: '.photo-data',
+           photo: '.pxu-photo'
+       });
+    });
+</script>
+ 
+<style type="text/css">
+ 
+/* ---  tumblr controls styling by odeysseus
+        http://odeysseus.tumblr.com/post/163708246967/ --- */
+ 
+.tmblr-iframe {
+    white-space:nowrap;
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -o-filter: invert(100%);
+    -ms-filter: invert(100%);
+    filter: invert(100%);
+    opacity:1;
+    transition: .4s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    position:fixed!important;
+    right:-30px!important;
+    transform:scale(0.7,0.7);
+}
+ 
+.tmblr-iframe:hover {
+    opacity:1;
+}
+ 
+/* --- tooltips & scrollbars --- */
+ 
+#s-m-t-tooltip {
+    position:absolute;
+    margin-top: 15px;
+    z-index:9999;
+    padding:3px 5px;
+    background:#333333;
+    color:#ffffff;
+    border-radius:0px;
+    font-size:10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(51,51,51,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(51,51,51,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(51,51,51,0.5);
+}
+ 
+::-webkit-scrollbar-thumb:vertical {background-color:#f2992e;}
+::-webkit-scrollbar-button:horizontal {background-color:#f2992e;}
+::-webkit-scrollbar {background-color:transparent; width:3px;}
+
+
+    .popupnavlinks {
+padding-top:5px;
+padding-bottom:5px;
+text-align:center; }
+
+.popupnavlinks a {
+display:inline-block;
+width:120px; height:10px;
+margin:2px; padding:6px 6px 10px;
+text-align:center;
+font-family:'helvetica';
+font-size:8px;
+text-transform:uppercase;
+letter-spacing:1px;
+   border-left: double 3px #000;
+   border-top: double 3px #000;
+   border-right: double 3px #000;
+   border-bottom: double 3px #000;
+color: ; 
+background:#1b1b1b;
+
+    -moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+    
+}
+
+.popupnavlinks a:hover {
+display:inline-block;
+width:120px; margin:2px;
+padding:6px 6px 10px;
+text-align:center;
+font-family:'helvetica';
+font-size:9px;
+text-transform:uppercase;
+letter-spacing:1px;
+    
+color:#2e2e2e;
+background:transparent;
+
+    -moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+ 
+/* --- basics --- */
+ 
+body {
+    background-color:#0c0c0c;
+    background-image:url('https://xatimg.com/image/l4uUZ3Exkzav.png');
+    
+    background-repeat:repeat;
+    
+    
+    color:#ffffff;
+    font-family: arial;
+    font-size:12px;
+    line-height:15px;
+    font-weight:300;
+    text-align:justify;
+    margin:0;
+}
+ 
+a {
+    color:#ffffff;
+    text-decoration:none;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+ 
+    a:hover {
+        color:#ffffff;
+        text-decoration:none;
+    }
+   
+p a {box-shadow:#666666 0px -5px 0px inset;}
+p a:hover {box-shadow:#666666 0px -15px 0px inset;}
+ 
+img {
+    border:none;
+    text-decoration:none;
+}
+ 
+b, strong, bold {
+    color: #f2992e;
+    font-weight:700;
+    text-transform:uppercase;
+}
+ 
+i, em, italic {
+    color:#dcd3d0;
+}
+ 
+u {
+    text-decoration:none;
+}
+ 
+    .firstletter, u {
+        display:block;
+        float:left;
+        padding:12px 14px;
+        background:#f2992e;
+        color:#333333;
+        font-weight:700;
+        text-transform:uppercase;
+        font-size:14px;
+        margin:0px 10px 0px 0px;
+    }
+ 
+s, strike {
+    text-decoration-color:#f2992e;
+}
+ 
+small, sub, sup, big {
+    font-size:10px;
+    line-height:14px;
+    vertical-align:baseline;
+}
+ 
+blockquote {
+    padding:0px 5px 0px 15px;
+    border-left:1px solid #555555;
+    margin-left:5px;
+    margin-right:0px;
+}
+ 
+    blockquote img {
+        max-width:360px;
+        height:auto;
+    }
+   
+        blockquote blockquote {
+            margin-right:0px;
+        }
+       
+            blockquote blockquote img {
+                max-width:350px;
+                height:auto;
+                margin-top:10px;
+            }
+ 
+pre {
+    font-family: arial;
+    font-size:10px;
+    text-transform:uppercase;
+    font-weight:700;
+    padding:10px;
+    background-color:#ccc;
+    color:#333333;
+    border-radius:0px;
+}
+ 
+    pre i, pre em, pre b, pre strong, pre a {
+        color:#333333;
+    }
+ 
+ul {
+    padding-left:15px;
+}
+ 
+    ul li {
+        list-style-type:none;
+    }
+   
+        ul li:before {
+          content: "— ";
+          text-indent: -5px;
+        }
+ 
+/* --- header styles --- */
+ 
+h1 {
+    margin:0px;
+    font-weight:bold;
+    color:#f2992e;
+    text-align:left;
+}
+ 
+h2 {
+    font-weight:normal;
+    color:#f2992e;
+    text-align:left;
+    text-transform:uppercase;
+    font-size:12px;
+}
+ 
+    h2 b, b h2, h2 i, i h2,
+    h2 strong, strong h2, h2 em, em h2 {
+        color:#f2992e;
+    }
+   
+ 
+/* --- container --- */
+ 
+.container {
+    position:absolute;
+    margin-top:-325px;
+    margin-left:-500px;
+    top:50%;
+    left:50%;
+    width:1000px;
+    height:650px;
+    border-radius:0px;
+    overflow:hidden;
+    background-color:#151515;
+    box-shadow:rgba(0,0,0,.05) 1px 1px 3px;
+}
+
+ 
+/* --- pagination --- */
+ 
+.topbar {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100px;
+    height:40px;
+    background-color:#f2992e;
+}
+   
+.pagination {
+    position:absolute;
+    width:100px;
+    height:40px;
+    z-index:999;
+    text-align:center;
+    padding:0px!important;
+    left:0px!important;
+    top:0px;
+    color:#333333;
+    font-size:12px;
+}
+ 
+    .pagination a {
+        color:#333333;
+        line-height:40px;
+        font-weight:700;
+        letter-spacing:0.5px;
+    }
+ 
+.small-title {
+    position:absolute;
+    top:0px;
+    left:100px;
+    width:340px;
+    height:40px;
+    font-family:arial;
+    font-size:9px;
+    background-color:#333333;
+    box-sizing:border-box;
+    padding:0px 15px;
+    line-height:40px;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:400;
+}
+ 
+/* --- sidebar --- */
+ 
+.sidebar-img {
+    position:absolute;
+    top:40px;
+    left:0px;
+    width:440px;
+    height:460px;
+    background-image:url('https://static.tumblr.com/5942f583be3d3f9a4a2508346003032a/3przrzw/7pUpm02kt/tumblr_static_z54yzqvf0i8cg8k0wsocsos8.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+}
+ 
+.big-title {
+    position:absolute;
+    opacity:1;
+    z-index:999;
+    left:0px;
+    bottom:120px;
+    width:470px;
+    height:auto;
+    font-size:47px;
+    line-height:90px;
+    font-weight:700;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    text-align: left;
+}
+  .small-text {
+    position:absolute;
+    opacity:1;
+    z-index:999;
+    left:0px;
+    bottom:150px;
+    width:470px;
+    height:auto;
+    font-size:12px;
+    line-height:90px;
+    font-weight:700;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    text-align: center;
+}
+ 
+/* --- description --- */
+ 
+.description {
+    position:absolute;
+    z-index:5;
+    left:0px;
+    bottom:0px;
+    width:300px;
+    height:150px;
+    padding:20px;
+    box-sizing:border-box;
+    font-size:10px;
+    line-height:18px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background-color:#333333;
+}
+ 
+
+ 
+/* --- navigation --- */
+ 
+.nav {
+    position:absolute;
+    left:300px;
+    bottom:0px;
+    width:140px;
+    height:150px;
+    text-align:center;
+    box-sizing:border-box;
+    padding:15px 0px 0px 5px;
+    background-color:#333333;
+}
+ 
+    .nav a {
+        float:left;
+        width:20px;
+        height:20px;
+        line-height:20px;
+        text-align:center;
+        font-size:20px;
+        margin:5px;
+        color:#fff;
+        padding:6px;
+        border-radius:0px;
+        background-color:#f2992e;
+    }
+ 
+/* --- entries --- */
+ 
+.entries {
+    position:absolute;
+    z-index:3;
+    top:0px;
+    right:0px;
+    width:520px;
+    height:650px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background-color:transparent;
+    box-sizing:border-box;
+    padding:60px 20px 20px 20px;
+}
+ 
+/* --- posts --- */
+ 
+.post {
+    width:400px;
+    padding:20px;
+    overflow:hidden;
+    
+    
+    margin-bottom:20px;
+    
+    background-color:#333333;
+    border-radius: 0px;
+    box-shadow:rgba(0,0,0,.05) 1px 1px 3px;
+}
+ 
+    .post img {
+        max-width:100%;
+        height:auto;
+    }
+ 
+/* --- texts --- */
+ 
+.title {
+    font-weight:normal;
+    font-size:22px;
+    line-height:24px;
+    color:#f2992e;
+    text-align:left;
+}
+   
+    .title a {
+        color:#f2992e;
+    }
+ 
+.more a {
+    font-size:18px;
+    color:#f2992e;
+}
+ 
+.txt {
+    margin-bottom:20px;
+}
+ 
+    .txt img {
+        max-width:100%;
+        border-radius:0px;
+        
+    }
+   
+    .txt blockquote img {
+        
+    }
+   
+        .txt blockquote blockquote img {
+            
+        }
+ 
+/* --- photos --- */
+ 
+.photo {
+    margin:-20px -20px 0px -20px;
+}
+   
+.photo-slideshow {
+    margin:-20px -20px 0px -20px;
+}
+ 
+    .photo-slideshow img {
+        border-radius:0px;
+    }
+ 
+/* --- quotes --- */
+ 
+.quote {
+    text-align:left;
+    font-family:oswald;
+    font-size:18px;
+    line-height:25px;
+    font-weight:400;
+}
+ 
+.source {
+    margin-top:4px;
+    text-align:right;
+}
+ 
+/* --- audio --- */
+ 
+.audio {
+    float:left;
+    width:70px;
+    height:70px;
+    position:relative;
+    overflow:hidden;
+}
+ 
+    .audio:hover .play {opacity:1;width:30px;}
+    .audio:hover img {margin-left:30px;}
+ 
+.cover img {
+    width:70px;
+    position:absolute;
+    transition:0.5s ease;
+    -o-transition:0.5s ease;
+    -moz-transition:0.5s ease;
+    -webkit-transition:0.5s ease;
+}
+ 
+.play {
+    overflow:hidden;
+    width:0px;
+    height:30px;
+    background:#333333;
+    position:absolute;
+    padding:20px 0px;
+    transition:0.5s ease;
+    -o-transition:0.5s ease;
+    -moz-transition:0.5s ease;
+    -webkit-transition:0.5s ease;
+}
+ 
+.au b {
+    color:#f2992e;
+    font-weight:700;
+    margin-right:2px;
+}
+ 
+.au {
+    height:45px;
+    overflow:hidden;
+    padding:12px 10px;
+    line-height:15px;
+    margin-left:70px;
+    text-align:left;
+}
+ 
+/* --- asks --- */
+ 
+.question {
+    margin:0px 0px 10px 0px;
+    border-radius:0px;
+    padding:20px;
+    background-color:#151515;
+}
+ 
+    .asker {
+        float:left;
+        margin-right:2px;
+        color: #f2992e;
+        font-weight:700;
+        text-transform:uppercase;
+    }
+ 
+/* --- chat --- */
+ 
+.chat ul {
+    list-style-type:none;
+    padding-left:0px;
+    margin-bottom:20px;
+}
+ 
+    .chat ul li:before {
+        content: none;
+        text-indent: 0px;
+    }
+   
+    .chat ul li {
+        margin-bottom:5px;
+    }
+   
+    .chat .label {
+        text-transform:uppercase;
+        font-weight:700;
+        color:#f2992e;
+    }
+ 
+/* --- permalinks --- */
+ 
+.permalink {
+    font-weight:700;
+    margin:0px -20px -20px -20px;
+    padding:10px;
+    font-size:8px;
+    letter-spacing:0px;
+    text-transform:uppercase;
+    background-color:#333333;
+    border-top:1px solid #555555;
+    border-radius:0px 0px 0px 10px;
+    color:#ffffff;
+}
+ 
+    .permalink a {
+        display:inline-block;
+        color:#ffffff;
+    }
+   
+.reb {
+    display:inline-block;
+    vertical-align:middle;
+    float:right;
+    font-size:10px;
+}
+ 
+    .reb i {
+        color:#ffffff;
+    }
+ 
+/* --- tags --- */
+ 
+.tags {
+    margin-top:0px;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    text-align:justify;
+    font-weight:400;
+    font-size:10px;
+}
+ 
+    .tags a {
+        display:inline;
+        text-transform:none;
+        line-height:14px;
+        padding-bottom:1px;
+        margin:2px 4px 0px 0px;
+        color:#f2992e;
+        border-bottom:1px solid transparent;
+    }
+   
+        .tags a:hover {
+            border-bottom:1px solid #ffffff;
+        }
+ 
+/* --- notes --- */
+ 
+.pagenotes {
+    
+    width:400px;
+    text-align:left;
+    background-color:#333333;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:0px;
+    box-shadow:rgba(0,0,0,.05) 1px 1px 3px;
+}
+ 
+    .pagenotes img {
+        display:none;
+    }
+   
+    .pagenotes a {
+        color:#f2992e;
+        font-weight:bold;
+    }
+   
+    .pagenotes ol {
+        list-style-type:none;
+        margin:0px;
+        padding:0px;
+    }
+   
+    .pagenotes ol li {
+        margin:5px;
+    }
+ 
+/* --- credit --- */
+ 
+.credit a {
+    position:fixed;
+    font-size:14px;
+    right:10px;
+    bottom:10px;
+    text-align:center;
+    width:15px;
+    height:15px;
+    line-height:15px;
+    color:#f2992e;
+}
+ 
+ 
+
+ 
+</style>
+<link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=saviorem-blog%26postID=183524425647" /><link rel="alternate" href="ios-app://305343404/tumblr/x-callback-url/blog?blogName=saviorem-blog&postID=183524425647" /><link rel="alternate" type="application/json+oembed" href="https://www.tumblr.com/oembed/1.0?url=https://saviorem-blog.tumblr.com/post/183524425647/its-july-and-that-means-its-this-boys-birthday" title="toshiro1234:
+&ldquo;It&rsquo;s July and that means it&rsquo;s this boy&rsquo;s birthday month 🎉🎊🎈
+&rdquo;"/><link rel="amphtml" href=https://saviorem-blog.tumblr.com/post/183524425647/its-july-and-that-means-its-this-boys-birthday/amp /><script
+    defer
+    type="application/javascript"
+    id="bilmur"
+    data-provider="tumblr.com"
+    data-service="blognetwork"
+    data-customproperties='{"theme": ""}'
+    nonce="DRVy08Qx64U3dcrEcTTi1pA"
+    src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202350"
+  ></script><script src="https://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=a8fadfa499d8cb7c3f8eefdf0b1adfdd"></script><link rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3"><meta name="keywords" content="power of the protector.,( ichigo. ),soul queue" /><!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="Tumblr" /><meta property="og:title" content="❝ SOULAR ECLIPSE!" /><meta property="og:description" content="It&rsquo;s July and that means it&rsquo;s this boy&rsquo;s birthday month 🎉🎊🎈" /><meta property="og:url" content="https://saviorem-blog.tumblr.com/post/183524425647/its-july-and-that-means-its-this-boys-birthday" /><meta property="og:type" content="article" /><meta property="og:image" content="https://64.media.tumblr.com/64250d1f033e638d5a1d675e95625e88/tumblr_pbf2ywlhGM1tyrxxwo1_1280.jpg" /><meta property="og:image:secure_url" content="https://64.media.tumblr.com/64250d1f033e638d5a1d675e95625e88/tumblr_pbf2ywlhGM1tyrxxwo1_1280.jpg" /><meta property="og:image:type" content="image/jpeg" /><meta property="og:image:width" content="1280" /><meta property="og:image:height" content="718" /><meta property="og:image" content="https://64.media.tumblr.com/9623032f5840c0531ea466905801c3ee/tumblr_pbf2ywlhGM1tyrxxwo2_640.jpg" /><meta property="og:image:secure_url" content="https://64.media.tumblr.com/9623032f5840c0531ea466905801c3ee/tumblr_pbf2ywlhGM1tyrxxwo2_640.jpg" /><meta property="og:image:type" content="image/jpeg" /><meta property="og:image:width" content="603" /><meta property="og:image:height" content="338" /><meta property="og:image" content="https://64.media.tumblr.com/d59913c9c7356463fb1d35b454b6e930/tumblr_pbf2ywlhGM1tyrxxwo3_1280.jpg" /><meta property="og:image:secure_url" content="https://64.media.tumblr.com/d59913c9c7356463fb1d35b454b6e930/tumblr_pbf2ywlhGM1tyrxxwo3_1280.jpg" /><meta property="og:image:type" content="image/jpeg" /><meta property="og:image:width" content="694" /><meta property="og:image:height" content="391" /><meta property="og:image" content="https://64.media.tumblr.com/14c60df692a41facdda63a085ddd0522/tumblr_pbf2ywlhGM1tyrxxwo4_1280.jpg" /><meta property="og:image:secure_url" content="https://64.media.tumblr.com/14c60df692a41facdda63a085ddd0522/tumblr_pbf2ywlhGM1tyrxxwo4_1280.jpg" /><meta property="og:image:type" content="image/jpeg" /><meta property="og:image:width" content="1280" /><meta property="og:image:height" content="714" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=saviorem-blog&amp;postID=183524425647" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=saviorem-blog&amp;postID=183524425647" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="saviorem-blog" /><meta name="twitter:description" content="toshiro1234: &ldquo;It&rsquo;s July and that means it&rsquo;s this boy&rsquo;s birthday month 🎉🎊🎈 &rdquo;" /><meta name="twitter:image" content="https://64.media.tumblr.com/64250d1f033e638d5a1d675e95625e88/tumblr_pbf2ywlhGM1tyrxxwo1_500.jpg" /><meta name="twitter:url" content="https://saviorem-blog.tumblr.com/post/183524425647/its-july-and-that-means-its-this-boys-birthday" /><meta name="twitter:site" content="tumblr" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=saviorem-blog&amp;postID=183524425647&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=saviorem-blog&amp;postID=183524425647&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=saviorem-blog&amp;postID=183524425647&amp;referrer=twitter-cards" /><!-- GOOGLE CAROUSEL --><script type="application/ld+json">
+	{"@type":"SocialMediaPosting","url":"https:\/\/saviorem-blog.tumblr.com\/post\/183524425647\/its-july-and-that-means-its-this-boys-birthday","mainEntityOfPage":true,"datePublished":"2019-03-17T20:01:37+00:00","author":"saviorem-blog","image":{"@list":["https:\/\/64.media.tumblr.com\/64250d1f033e638d5a1d675e95625e88\/tumblr_pbf2ywlhGM1tyrxxwo1_1280.jpg","https:\/\/64.media.tumblr.com\/9623032f5840c0531ea466905801c3ee\/tumblr_pbf2ywlhGM1tyrxxwo2_640.jpg","https:\/\/64.media.tumblr.com\/d59913c9c7356463fb1d35b454b6e930\/tumblr_pbf2ywlhGM1tyrxxwo3_1280.jpg","https:\/\/64.media.tumblr.com\/14c60df692a41facdda63a085ddd0522\/tumblr_pbf2ywlhGM1tyrxxwo4_1280.jpg"]},"articleBody":"toshiro1234:\n\u201cIt\u2019s July and that means it\u2019s this boy\u2019s birthday month \ud83c\udf89\ud83c\udf8a\ud83c\udf88\n\u201d","@context":"http:\/\/schema.org"}</script><link rel="canonical" href="https://toshiro1234.tumblr.com/post/175589127288/its-july-and-that-means-its-this-boys-birthday" /></head>
+<body>
+
+<SCRIPT TYPE="text/javascript"> 
+<!-- 
+function clickIE() {if (document.all) {(message);return false;}} 
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) { 
+if (e.which==2||e.which==3) {(message);return false;}}} 
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+document.oncontextmenu=new Function("return false") 
+// --> 
+</SCRIPT>
+ 
+<div class="container">
+
+ 
+<!-- topbar with pagination + small title -->
+ 
+<div class="topbar">
+    
+</div>
+ 
+<div class="small-title">i wish for the power to protect.</div>
+ 
+<!-- sidebar image + big title -->
+ 
+<div class="sidebar-img"></div>
+  
+ <div class="small-text">1ㅤ4ㅤ8ㅤ8ㅤ1ㅤ5ㅤ9ㅤ1ㅤ0ㅤ8</div>
+<div class="big-title">⸺ h  y  p  n  o  s 中</div>
+ 
+<!-- description + navigation -->
+ 
+<div class="description">                                                    <b>``I will dedicate and sacrifice my everything
+For just a seconds worth of how my story's ending.</b>
+<br><center>✖ i'll ヒプノシス<br> try stop me <a href="https://xat.me/Hypnos"><b>IF YOU CAN</b><br> I'll Fight For Myself. Thank You, Zangetsu</a> </center> </div> 
+ 
+<div class="nav">
+    <a href="https://xat.me/Zwei" title="Amor <3">
+        <span class="sf sf-refresh"></span>
+    </a>
+    <a href="https://xat.me/RainbowKanojo" title="Pame">
+        <span class="sf sf-chat-o"></span>
+    </a>
+    <a href="https://xat.me/Hypnos" title="???">
+        <span class="sf sf-exclamation-mark"></span>
+    </a>
+    <a href="https://xat.me/Hypnos" title="???">
+        <span class="sf sf-star-o"></span>
+    </a>
+        <a href="https://xat.me/Hypnos" title="???">
+        <span class="sf sf-navigation"></span>
+    </a>
+        <a href="https://xat.me/Hypnos" title="???">
+        <span class="sf sf-more-o"></span>
+    </a>
+</div>
+
+<!-- start of posts -->
+ <div id="overlay"></div>
+ 
+<div class="entries">
+ 
+
+<div class="post" id="183524425647">
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+    <div class="photo-slideshow" id="photoset_183524425647" data-layout="22">
+        
+            <div class="photo-data">
+                <div class="pxu-photo">
+                    <img src="https://64.media.tumblr.com/df66c80cb67254d79c8dbecdd1f486f4/f241e5a698ac56a8-ec/s540x810/aaeca7124e7992903affa1e5adaa464ae2fbd2a6.gifv" width="500" height="280" data-highres="https://64.media.tumblr.com/df66c80cb67254d79c8dbecdd1f486f4/f241e5a698ac56a8-ec/s540x810/aaeca7124e7992903affa1e5adaa464ae2fbd2a6.gifv" data-width="1280" data-height="718">
+                </div>
+               
+                <a class="tumblr-box" rel="post-183524425647" href="https://64.media.tumblr.com/df66c80cb67254d79c8dbecdd1f486f4/f241e5a698ac56a8-ec/s540x810/aaeca7124e7992903affa1e5adaa464ae2fbd2a6.gifv"></a>
+            </div>
+        
+            <div class="photo-data">
+                <div class="pxu-photo">
+                    <img src="https://64.media.tumblr.com/0d3a04159c7821f19669c20f74e70a8b/f241e5a698ac56a8-93/s540x810/2171c87c3c63f4c0feca5dfb57f665b90b07bad8.gifv" width="500" height="280" data-highres="https://64.media.tumblr.com/0d3a04159c7821f19669c20f74e70a8b/f241e5a698ac56a8-93/s540x810/2171c87c3c63f4c0feca5dfb57f665b90b07bad8.gifv" data-width="603" data-height="338">
+                </div>
+               
+                <a class="tumblr-box" rel="post-183524425647" href="https://64.media.tumblr.com/0d3a04159c7821f19669c20f74e70a8b/f241e5a698ac56a8-93/s540x810/2171c87c3c63f4c0feca5dfb57f665b90b07bad8.gifv"></a>
+            </div>
+        
+            <div class="photo-data">
+                <div class="pxu-photo">
+                    <img src="https://64.media.tumblr.com/e6263de62df48240af06e8ffd5a4a5cd/f241e5a698ac56a8-ce/s540x810/76ca3ada522f2c3917337cf7a7dd1713c3bbfd42.gifv" width="500" height="282" data-highres="https://64.media.tumblr.com/e6263de62df48240af06e8ffd5a4a5cd/f241e5a698ac56a8-ce/s540x810/76ca3ada522f2c3917337cf7a7dd1713c3bbfd42.gifv" data-width="694" data-height="391">
+                </div>
+               
+                <a class="tumblr-box" rel="post-183524425647" href="https://64.media.tumblr.com/e6263de62df48240af06e8ffd5a4a5cd/f241e5a698ac56a8-ce/s540x810/76ca3ada522f2c3917337cf7a7dd1713c3bbfd42.gifv"></a>
+            </div>
+        
+            <div class="photo-data">
+                <div class="pxu-photo">
+                    <img src="https://64.media.tumblr.com/d027dd09456fd91a1b54d32a0fe2393e/f241e5a698ac56a8-2f/s540x810/0d9bd0c9e7d5b42f70d008abda2b733742a5b57e.gifv" width="500" height="279" data-highres="https://64.media.tumblr.com/d027dd09456fd91a1b54d32a0fe2393e/f241e5a698ac56a8-2f/s540x810/0d9bd0c9e7d5b42f70d008abda2b733742a5b57e.gifv" data-width="1280" data-height="714">
+                </div>
+               
+                <a class="tumblr-box" rel="post-183524425647" href="https://64.media.tumblr.com/d027dd09456fd91a1b54d32a0fe2393e/f241e5a698ac56a8-2f/s540x810/0d9bd0c9e7d5b42f70d008abda2b733742a5b57e.gifv"></a>
+            </div>
+
+      <div class="photo-data">
+                <div class="pxu-photo">
+                    <img src="https://64.media.tumblr.com/74db03ca41367a041cf1ae5e111700ae/d6053106dc1da708-fb/s540x810/7a95b73e22cd14c67449285517a82b82b993696d.gifv" width="500" height="279" data-highres="https://64.media.tumblr.com/74db03ca41367a041cf1ae5e111700ae/d6053106dc1da708-fb/s540x810/7a95b73e22cd14c67449285517a82b82b993696d.gifv" data-width="1280" data-height="714">
+                </div>
+        
+    </div>
+<!-- partial -->
+  
+</body>
+</html>
